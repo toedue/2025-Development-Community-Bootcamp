@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  background-image: url("./img/bg1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.header h1 {
+  font-size: 52px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header .title {
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.profile img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bio {
+  max-width: 600px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skills {
+  padding: 80px 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.skills h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  color: white;
+  padding: 40px 20px;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(74, 108, 247, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+}
+
+.item1 {
+  background-color: #de571d;
+}
+.item2 {
+  background-color: #4a6cf7;
+}
+.item3 {
+  background-color: #f9f33c;
+}
+.item4 {
+  background-color: #191d2b;
+}
+.item5 {
+  background-color: #4088b4;
+}
+.item6 {
+  background-color: #989daf;
+}
+
+.contact {
+  padding: 80px 40px;
+  text-align: center;
+  color: white;
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.contact form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact label {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.name-email-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.name-email-container > div {
+  flex: 1;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 17px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 17px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contact textarea {
+  min-height: 180px;
+  resize: vertical;
+  margin-bottom: 40px;
+}
+
+.contact button {
+  padding: 16px 40px;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 210, 255, 0.4);
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+}
+
+.contact button::after {
+  content: "➤";
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 15px;
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header .title {
+    font-size: 22px;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .profile img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills h2,
+  .contact h2 {
+    font-size: 32px;
+  }
+
+  .name-email-container {
+    flex-direction: column;
+  }
+
+  .contact button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 60px 20px;
+  }
+
+  .profile img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .bio {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
