@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>TODO LIST</h1>
+    <div class="input-row">
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search note..." />
+      </div>
+      <input type="text" id="todoInput" />
+      <button id="filterButton">ALL</button>
+    </div>
+    <ul id="todoList"></ul>
+    <p>Total todos: <span id="totalCount">0</span></p>
+    <p>Completed todos: <span id="completedCount">0</span></p>
+    <button id="clearButton">Clear All</button>
+    <script src="script.js"></script>
+  </body>
+</html>
