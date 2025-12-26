@@ -11,7 +11,7 @@ app.use("/", routes);
 // 404 handler
 app.use((req, res) => {
   res.status(404).json({
-    message: "Oops! This route does not exist.",
+    message: "This route does not exist.",
     status: "error",
   });
 });
